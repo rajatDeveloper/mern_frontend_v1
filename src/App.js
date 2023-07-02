@@ -73,8 +73,6 @@ function App() {
         {stripeApiKey && (
           <Elements stripe={loadStripe(stripeApiKey)}>
             <ProtectedRoute exact path="/process/payment" component={Payment} />
-
-            {/* /admin/product */}
           </Elements>
         )}
         {isAuthenticated && <UserOption user={user} />}
